@@ -33,7 +33,7 @@ export const wedding: WeddingConfig = {
       childOrder: 'Putra keempat dari',
       father: 'Bapak Tomir',
       mother: 'Ibu Wasiah',
-      instagram: '@ADNINEEE',
+      instagram: '@adnineee',
     },
     bride: {
       nickname: 'Meli',
@@ -42,7 +42,7 @@ export const wedding: WeddingConfig = {
       childOrder: 'Putri ketiga dari',
       father: 'Bapak Toani',
       mother: 'Ibu Warti',
-      instagram: 'username',
+      instagram: '@MeliWiliani',
     },
     hashtag: '#AdninMeliHalalJourney',
   },

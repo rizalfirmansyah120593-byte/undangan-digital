@@ -144,7 +144,7 @@ export const wedding: WeddingConfig = {
 
   rsvp: {
     enabled: true,
-    whatsapp: '081234567890',
+    whatsapp: '085210463701',
     maxGuests: 3,
     deadline: '2027-03-14',
   },

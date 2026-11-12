@@ -13,7 +13,7 @@ import type { WeddingConfig } from './types';
  */
 export const wedding: WeddingConfig = {
   theme: 'samudra',
-  allowThemePreview: false,
+  allowThemePreview: true,
 
   site: {
     url: '',
@@ -169,7 +169,7 @@ export const wedding: WeddingConfig = {
   },
 
   music: {
-    enabled: false,
+    enabled: true,
     src: '/music/song1.mp3',
     title: 'Backsound',
   },

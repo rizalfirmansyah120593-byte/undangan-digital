@@ -129,7 +129,7 @@ Contoh pengaturan tema, pasangan, dan foto:
 
 ```ts
 theme: 'samudra',
-allowThemePreview: false,
+allowThemePreview: true,
 
 couple: {
   order: 'groom-first',
@@ -168,7 +168,7 @@ Tipe dan penjelasan setiap bagian ada di [`src/config/types.ts`](src/config/type
 | `taman` | Sage dan botani |
 | `langit` | Navy malam |
 
-Saat pengembangan, tema dapat dicoba melalui pemilih tema. Untuk pratinjau dari tautan situs, atur `allowThemePreview: true`, lalu kunjungi `?theme=jati&preview`. Matikan kembali sebelum membagikan undangan.
+Pemilih tema tersedia untuk tamu jika `allowThemePreview: true`. Tombol palet muncul di pojok kanan atas; pilihan tema akan mengubah tampilan saat itu dan memperbarui parameter `?theme=` pada tautan. Atur `allowThemePreview: false` jika ingin mengunci tema untuk semua tamu.
 
 ---
 
@@ -209,7 +209,7 @@ WhatsApp dapat menyimpan cache pratinjau lama. Setelah mengubah gambar, coba bag
 
 ### Musik
 
-File audio tidak disertakan di repositori dan musik nonaktif secara default. Tambahkan musik yang kamu miliki atau berlisensi untuk digunakan ke `public/music/`, lalu atur `music.enabled: true` dan `music.src` di konfigurasi. Musik mulai setelah tamu berinteraksi dengan undangan karena browser membatasi pemutaran audio otomatis. Jika pemutaran ditolak atau file tidak dapat dimuat, undangan akan menampilkan notifikasi dan tombol musik dapat digunakan untuk mencoba lagi.
+Repositori menyertakan backsound `public/music/song1.mp3` dan konfigurasi contoh mengaktifkannya. Musik mulai setelah tamu berinteraksi dengan undangan karena browser membatasi pemutaran otomatis. Untuk mengganti lagu, tambahkan audio yang boleh dipublikasikan ke `public/music/`, lalu sesuaikan `music.src` di konfigurasi. Jika pemutaran ditolak atau file tidak dapat dimuat, undangan akan menampilkan notifikasi dan tombol musik dapat digunakan untuk mencoba lagi.
 
 ---
 
@@ -330,7 +330,7 @@ Pastikan konfigurasi base path sesuai dengan alamat tempat situs dipasang.
 - [ ] Alamat, pin Google Maps, nomor RSVP, dan rekening sudah dicek ulang.
 - [ ] Foto dan musik yang dipakai sudah benar serta boleh ditampilkan ke tamu.
 - [ ] URL situs dan gambar pratinjau tautan sudah diatur.
-- [ ] `allowThemePreview` sudah `false`.
+- [ ] `allowThemePreview` sudah disesuaikan: `true` untuk memberi tamu pilihan tema, atau `false` untuk mengunci tema.
 - [ ] Undangan diuji di ponsel dan desktop.
 - [ ] Tautan personal, RSVP, kalender, maps, dan fitur hadiah sudah dicoba.
 - [ ] Konfigurasi lokal dan foto pribadi tidak ikut di-commit.
@@ -350,7 +350,7 @@ src/
 public/
 ├── gambar/              Foto yang tersedia secara publik
 ├── images/              Aset contoh dan logo
-└── music/               Tambahkan sendiri audio berlisensi
+└── music/               Backsound song1.mp3
 scripts/
 ├── deploy.mjs           Build dan deploy Cloudflare Pages
 ├── ensure-config.mjs    Membuat konfigurasi lokal dari contoh

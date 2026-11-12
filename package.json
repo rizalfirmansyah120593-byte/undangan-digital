@@ -1,0 +1,44 @@
+{
+  "name": "wedding-invitation",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Undangan pernikahan digital (static) — Next.js, mobile-first, 3 tema.",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "predev": "node scripts/ensure-config.mjs",
+    "dev": "next dev",
+    "prebuild": "node scripts/ensure-config.mjs",
+    "build": "next build",
+    "start": "npx serve@14 out",
+    "deploy": "node scripts/deploy.mjs",
+    "build:upload": "node scripts/deploy.mjs --build-only",
+    "lint": "eslint .",
+    "pretypecheck": "node scripts/ensure-config.mjs",
+    "typecheck": "tsc --noEmit",
+    "images": "node scripts/optimize-images.mjs"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.118.0",
+    "jsqr": "^1.4.0",
+    "motion": "^14.6.0",
+    "next": "16.4.3",
+    "qrcode-generator": "^2.0.4",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "yet-another-react-lightbox": "^3.32.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "autoprefixer": "^10.4.21",
+    "eslint": "^9",
+    "eslint-config-next": "16.4.3",
+    "postcss": "^8.5.6",
+    "sharp": "^0.35.5",
+    "tailwindcss": "^3.4.19",
+    "typescript": "^5.9.3"
+  }
+}

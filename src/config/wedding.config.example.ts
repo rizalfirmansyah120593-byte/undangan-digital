@@ -1,0 +1,213 @@
+import type { WeddingConfig } from './types';
+
+/**
+ * ============================================================
+ *  CONTOH CONFIG (data palsu) — file ini yang masuk ke git.
+ *
+ *  Data asli kamu ada di `wedding.config.ts` (di folder yang sama),
+ *  yang dibuat otomatis dari file ini saat `npm run dev` / `npm run build`
+ *  dan TIDAK ikut ter-commit (lihat .gitignore). Edit file itu, bukan ini.
+ *
+ *  Foto pribadi taruh di public/private/ (juga tidak ter-commit).
+ * ============================================================
+ */
+export const wedding: WeddingConfig = {
+  theme: 'samudra',
+  allowThemePreview: false,
+
+  site: {
+    url: '',
+    description: 'Dengan memohon rahmat Allah SWT, kami mengundang Bapak/Ibu/Saudara/i untuk hadir di hari bahagia kami.',
+    ogImage: '/gambar/og.jpg',
+    indexable: false,
+  },
+
+  timezone: 'WIB',
+
+  couple: {
+    order: 'groom-first',
+    groom: {
+      nickname: 'Nama Pria',
+      fullName: 'Nama Lengkap Pria',
+      photo: '/gambar/gambar21.jpg',
+      childOrder: 'Putra keempat dari',
+      father: 'Bapak Contoh',
+      mother: 'Ibu Contoh',
+      instagram: 'username',
+    },
+    bride: {
+      nickname: 'Nama Wanita',
+      fullName: 'Nama Lengkap Wanita',
+      photo: '/gambar/gambar20.jpg',
+      childOrder: 'Putri ketiga dari',
+      father: 'Bapak Contoh',
+      mother: 'Ibu Contoh',
+      instagram: 'username',
+    },
+    hashtag: '#HariBahagiaKita',
+  },
+
+  coverImage: '/gambar/og.jpg',
+  heroImage: '/gambar/gambar8.jpg',
+
+  events: [
+    {
+      title: 'Syukuran Sederhana',
+      date: '2027-03-12',
+      start: '08:00',
+      end: '20:00',
+      venue: 'Gedung Serbaguna Contoh',
+      address: 'Jl. Contoh No. 1, Kota Contoh',
+      mapsUrl: '',
+      note: 'Khusus keluarga & kerabat dekat',
+      // Contoh dress code khusus acara ini:
+      dressCode: { note: 'Putih & broken white', colors: [{ hex: '#FFFFFF', name: 'Putih' }, { hex: '#F3EEE4', name: 'Broken White' }] },
+    },
+    {
+      title: 'Akad Nikah & Resepsi',
+      date: '2027-03-14',
+      start: '08:00',
+      end: '20:00',
+      venue: 'Gedung Serbaguna Contoh',
+      address: 'Jl. Contoh No. 1, Kota Contoh',
+      mapsUrl: '',
+    },
+  ],
+
+  // colors: 'theme' = otomatis mengikuti tema. Atau custom, contoh:
+  // colors: ['#F4F7FB', { hex: '#7F9DC2', name: 'Dusty Blue' }]
+  dressCode: {
+    colors: 'theme',
+  },
+
+  quote: {
+    arabic:
+      'وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُمْ مِنْ أَنْفُسِكُمْ أَزْوَاجًا لِتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُمْ مَوَدَّةً وَرَحْمَةً ۚ إِنَّ فِي ذَٰلِكَ لَآيَاتٍ لِقَوْمٍ يَتَفَكَّرُونَ',
+    translation:
+      'Dan di antara tanda-tanda kebesaran-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang. Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda bagi kaum yang berpikir.',
+    source: 'QS. Ar-Rum : 21',
+  },
+
+  story: {
+    enabled: true,
+    items: [
+      {
+        date: 'Januari 2024',
+        title: 'Pertama Bertemu',
+        description: 'Atas izin Allah, kami dipertemukan di sebuah kajian di Bandung. Sederhana, tapi ternyata jadi awal segalanya.',
+        image: '/gambar/gambar19.jpg',
+      },
+      {
+        date: 'Agustus 2025',
+        title: "Ta'aruf",
+        description: 'Dengan niat baik dan didampingi keluarga, kami memulai proses saling mengenal.',
+        image: '/gambar/gambar4.jpg',
+      },
+      {
+        date: 'Desember 2026',
+        title: 'Lamaran',
+        description: 'Dua keluarga bertemu dan bersepakat. Bismillah, kami melangkah ke jenjang berikutnya.',
+        image: '/gambar/gambar22.jpg',
+      },
+    ],
+  },
+
+  gallery: {
+    enabled: true,
+    photos: [
+      { src: '/gambar/gambar1.jpg', alt: 'Potret pengantin wanita' },
+      { src: '/gambar/gambar3.png', alt: 'Potret ceria bersama di bawah langit biru' },
+      { src: '/gambar/gambar4.jpg', alt: 'Momen romantis di tengah bunga' },
+      { src: '/gambar/gambar6.jpg', alt: 'Momen romantis di tengah bunga' },
+      { src: '/gambar/gambar7.jpg', alt: 'Momen romantis di tengah bunga' },
+      { src: '/gambar/gambar8.jpg', alt: 'Momen romantis di tengah bunga' },
+      { src: '/gambar/gambar11.jpg', alt: 'Foto kenangan di kamera instan' },
+      { src: '/gambar/gambar13.jpg', alt: 'Potret resmi kedua mempelai' },
+      { src: '/gambar/gambar14.jpg', alt: 'Potret studio bersama' },
+      { src: '/gambar/gambar15.jpg', alt: 'Potret studio berdiri bersama' },
+      { src: '/gambar/gambar17.jpg', alt: 'Momen hangat di sesi foto studio' },
+      { src: '/gambar/gambar18.jpg', alt: 'Potret santai bersama' },
+      { src: '/gambar/gambar19.jpg', alt: 'Momen awal pertemuan' },
+      { src: '/gambar/gambar20.jpg', alt: 'Potret pengantin wanita di studio' },
+      { src: '/gambar/gambar21.jpg', alt: 'Potret pengantin pria di studio' },
+      { src: '/gambar/gambar22.jpg', alt: 'Kenangan dalam foto instan' },
+      { src: '/gambar/gambar23.jpg', alt: 'Kenangan dalam foto instan' },
+    ],
+    youtube: '',
+  },
+
+  liveStream: {
+    enabled: false,
+    platform: 'YouTube',
+    url: 'https://youtube.com/live/',
+  },
+
+  rsvp: {
+    enabled: true,
+    whatsapp: '081234567890',
+    maxGuests: 3,
+    deadline: '2027-03-14',
+  },
+
+  wishes: {
+    enabled: true,
+    pageSize: 8,
+  },
+
+  gift: {
+    enabled: true,
+    collapsed: true,
+    accounts: [
+      { type: 'bank', provider: 'BRI', number: '1234567890', holder: 'Nama Pria', logo: '/images/logos/BRI.svg' },
+      { type: 'bank', provider: 'BCA', number: '0987654321', holder: 'Nama Wanita' },
+      { type: 'ewallet', provider: 'GoPay', number: '081234567890', holder: 'Nama Pria', logo: '/images/logos/gopay.webp' },
+    ],
+    address: {
+      recipient: 'Nama Penerima',
+      phone: '081234567890',
+      address: 'Jl. Contoh No. 1, Kota Contoh',
+    },
+  },
+
+  music: {
+    enabled: false,
+    src: '/music/song1.mp3',
+    title: 'Backsound',
+  },
+
+  googleSheets: {
+    url: '',
+  },
+
+  checkin: {
+    enabled: true,
+  },
+
+  photobooth: {
+    enabled: true,
+  hashtag: '#HariBahagiaKita',
+  },
+
+  effects: {
+    envelope: true,
+    tapBurst: true,
+    parallax: true,
+  },
+
+  copy: {
+    coverLabel: 'The Wedding of',
+    localGreeting: 'Sugeng rawuh',
+    coverTo: 'Kepada Yth. Bapak/Ibu/Saudara/i',
+    coverButton: 'Buka Undangan',
+    coverNote: 'Mohon maaf apabila ada kesalahan penulisan nama/gelar',
+    salam: "Assalamu'alaikum Warahmatullahi Wabarakatuh",
+    opening:
+      'Maha Suci Allah yang telah menciptakan makhluk-Nya berpasang-pasangan. Dengan memohon rahmat dan ridha Allah SWT, kami bermaksud menyelenggarakan pernikahan putra-putri kami:',
+    closing:
+      'Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu.',
+    closingSalam: "Wassalamu'alaikum Warahmatullahi Wabarakatuh",
+    localThanks: 'Matur nuwun sanget',
+    familiesTitle: 'Kami yang berbahagia',
+    families: ['Kel. Bapak Contoh & Ibu Contoh', 'Kel. Bapak Contoh & Ibu Contoh'],
+  },
+};

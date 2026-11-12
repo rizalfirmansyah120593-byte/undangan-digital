@@ -158,8 +158,8 @@ export const wedding: WeddingConfig = {
     enabled: true,
     collapsed: true,
     accounts: [
-      { type: 'bank', provider: 'BRI', number: '052301021303508', holder: 'Muh. Adnin', logo: '/images/logos/bri.svg' },
-      { type: 'bank', provider: 'BRI', number: '750101019845535', holder: 'Meli Wiliani', logo: '/images/logos/bri.svg' },
+      { type: 'bank', provider: 'BRI', number: '052301021303508', holder: 'Muh. Adnin', logo: '/images/logos/BRI.svg' },
+      { type: 'bank', provider: 'BRI', number: '750101019845535', holder: 'Meli Wiliani', logo: '/images/logos/BRI.svg' },
     ],
     address: {
       recipient: 'Muh. Adnin',

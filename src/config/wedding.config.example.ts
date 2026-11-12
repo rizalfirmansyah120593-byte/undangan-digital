@@ -94,7 +94,7 @@ export const wedding: WeddingConfig = {
       {
         date: 'Januari 2024',
         title: 'Pertama Bertemu',
-        description: 'Atas izin Allah, kami dipertemukan di sebuah kajian di Bandung. Sederhana, tapi ternyata jadi awal segalanya.',
+        description: 'Atas izin Allah, kami dipertemukan di Sosial Media. Sederhana, tapi ternyata jadi awal segalanya.',
         image: '/gambar/gambar19.jpg',
       },
       {

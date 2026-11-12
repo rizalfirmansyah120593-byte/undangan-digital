@@ -184,7 +184,7 @@ export const wedding: WeddingConfig = {
 
   photobooth: {
     enabled: true,
-  hashtag: '#HariBahagiaKita',
+  hashtag: '#AdninMeliHalalJourney',
   },
 
   effects: {

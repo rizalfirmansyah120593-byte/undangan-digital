@@ -29,7 +29,7 @@ export const wedding: WeddingConfig = {
     groom: {
       nickname: 'Adnin',
       fullName: 'Muhammad Adnin',
-      photo: '/gambar/gambar21.jpg',
+      photo: '/gambar/gambar15.jpg',
       childOrder: 'Putra keempat dari',
       father: 'Bapak Tomir',
       mother: 'Ibu Wasiah',
@@ -38,7 +38,7 @@ export const wedding: WeddingConfig = {
     bride: {
       nickname: 'Meli',
       fullName: 'Meli Wiliani',
-      photo: '/gambar/gambar20.jpg',
+      photo: '/gambar/gambar6.jpg',
       childOrder: 'Putri ketiga dari',
       father: 'Bapak Toani',
       mother: 'Ibu Warti',

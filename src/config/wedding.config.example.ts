@@ -131,6 +131,7 @@ export const wedding: WeddingConfig = {
       { src: '/gambar/gambar15.jpg', alt: 'Potret studio berdiri bersama' },
       { src: '/gambar/gambar17.jpg', alt: 'Momen hangat di sesi foto studio' },
       { src: '/gambar/gambar18.jpg', alt: 'Potret santai bersama' },
+      { src: '/gambar/gambar19.jpg', alt: 'Potret santai bersama' },
     ],
     youtube: '',
   },

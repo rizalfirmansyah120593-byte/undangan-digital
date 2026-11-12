@@ -19,7 +19,7 @@ Dibuat dengan Next.js, React, dan Tailwind CSS — siap diekspor sebagai situs s
 
 <br /><br />
 
-<img src="public/gambar/gambar13.jpg" alt="Foto pasangan dalam busana pernikahan" width="72%" />
+<img src="public/gambar/Screenshot1.jpg" alt="Foto pasangan dalam busana pernikahan" width="72%" />
 
 <br />
 

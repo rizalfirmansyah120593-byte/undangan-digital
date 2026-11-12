@@ -207,6 +207,6 @@ export const wedding: WeddingConfig = {
     closingSalam: "Wassalamu'alaikum Warahmatullahi Wabarakatuh",
     localThanks: 'Matur nuwun sanget',
     familiesTitle: 'Kami yang berbahagia',
-    families: ['Kel. Bapak Contoh & Ibu Contoh', 'Kel. Bapak Contoh & Ibu Contoh'],
+    families: ['Kel. Bapak Tomir & Ibu Wasiah', 'Kel. Bapak Toani & Ibu Warti'],
   },
 };

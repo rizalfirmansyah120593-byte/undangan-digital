@@ -47,8 +47,8 @@ export const wedding: WeddingConfig = {
     hashtag: '#AdninMeliHalalJourney',
   },
 
-  coverImage: '/gambar/og.jpg',
-  heroImage: '/gambar/gambar8.jpg',
+  coverImage: '/gambar/gambar2.jpg',
+  heroImage: '/gambar/gambar17.jpg',
 
   events: [
     {
@@ -127,11 +127,6 @@ export const wedding: WeddingConfig = {
       { src: '/gambar/gambar15.jpg', alt: 'Potret studio berdiri bersama' },
       { src: '/gambar/gambar17.jpg', alt: 'Momen hangat di sesi foto studio' },
       { src: '/gambar/gambar18.jpg', alt: 'Potret santai bersama' },
-      { src: '/gambar/gambar19.jpg', alt: 'Momen awal pertemuan' },
-      { src: '/gambar/gambar20.jpg', alt: 'Potret pengantin wanita di studio' },
-      { src: '/gambar/gambar21.jpg', alt: 'Potret pengantin pria di studio' },
-      { src: '/gambar/gambar22.jpg', alt: 'Kenangan dalam foto instan' },
-      { src: '/gambar/gambar23.jpg', alt: 'Kenangan dalam foto instan' },
     ],
     youtube: '',
   },

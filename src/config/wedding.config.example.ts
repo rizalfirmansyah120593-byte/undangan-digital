@@ -116,7 +116,8 @@ export const wedding: WeddingConfig = {
     enabled: true,
     photos: [
       { src: '/gambar/gambar1.jpg', alt: 'Potret pengantin wanita' },
-      { src: '/gambar/gambar3.png', alt: 'Potret ceria bersama di bawah langit biru' },
+      { src: '/gambar/gambar2.jpg', alt: 'Potret ceria bersama di bawah langit biru' },
+      { src: '/gambar/gambar3.jpg', alt: 'Potret ceria bersama di bawah langit biru' },
       { src: '/gambar/gambar4.jpg', alt: 'Momen romantis di tengah bunga' },
       { src: '/gambar/gambar5.jpg', alt: 'Momen romantis di tengah bunga' },
       { src: '/gambar/gambar6.jpg', alt: 'Momen romantis di tengah bunga' },

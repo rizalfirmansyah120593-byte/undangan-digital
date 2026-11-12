@@ -3,7 +3,7 @@
 # 💌 Undangan Pernikahan Digital
 
 Undangan pernikahan digital yang hangat, interaktif, dan nyaman dibuka dari ponsel.
-Dibuat dengan Next.js, React, dan Tailwind CSS — siap diekspor sebagai situs statis.
+Dibuat dengan Next.js, React, Tailwind CSS, dan animasi GSAP — siap diekspor sebagai situs statis.
 
 [![Next.js](https://img.shields.io/badge/Next.js-16-black?logo=next.js)](https://nextjs.org/)
 [![React](https://img.shields.io/badge/React-19-149eca?logo=react)](https://react.dev/)
@@ -45,6 +45,7 @@ Website undangan ini dirancang **mobile-first** agar nyaman dibuka dari tautan W
 
 - **Sampul amplop interaktif** dengan nama tamu dan segel inisial.
 - **Enam tema** dengan palet warna, ornamen, dan animasi yang berbeda.
+- **Reveal GSAP + ScrollTrigger** untuk transisi bagian yang halus, dengan dukungan reduced motion.
 - Profil pasangan, cerita perjalanan, galeri foto, kutipan, dan hitung mundur acara.
 - Tombol kalender, petunjuk Google Maps, kode busana, serta latar musik.
 - RSVP melalui WhatsApp, buku ucapan, dan hadiah digital.
@@ -208,7 +209,7 @@ WhatsApp dapat menyimpan cache pratinjau lama. Setelah mengubah gambar, coba bag
 
 ### Musik
 
-File audio tidak disertakan di repositori. Tambahkan musik yang kamu miliki atau berlisensi untuk digunakan ke `public/music/`, lalu atur `music.enabled: true` dan `music.src` di konfigurasi. Musik mulai setelah tamu berinteraksi dengan undangan karena browser membatasi pemutaran audio otomatis.
+File audio tidak disertakan di repositori dan musik nonaktif secara default. Tambahkan musik yang kamu miliki atau berlisensi untuk digunakan ke `public/music/`, lalu atur `music.enabled: true` dan `music.src` di konfigurasi. Musik mulai setelah tamu berinteraksi dengan undangan karena browser membatasi pemutaran audio otomatis. Jika pemutaran ditolak atau file tidak dapat dimuat, undangan akan menampilkan notifikasi dan tombol musik dapat digunakan untuk mencoba lagi.
 
 ---
 

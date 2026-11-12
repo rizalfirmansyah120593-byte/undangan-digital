@@ -169,7 +169,7 @@ export const wedding: WeddingConfig = {
   },
 
   music: {
-    enabled: true,
+    enabled: false,
     src: '/music/song1.mp3',
     title: 'Backsound',
   },

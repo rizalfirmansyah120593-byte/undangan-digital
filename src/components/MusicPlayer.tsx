@@ -1,26 +1,46 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { wedding } from '@/config/wedding.config';
 import { GESTURE_EVENT, useInvitation } from './InvitationProvider';
 import Icon from './ui/Icon';
 import { asset } from '@/lib/asset';
+import { toast } from './ui/Toast';
 
 export default function MusicPlayer() {
   const { opened } = useInvitation();
   const audio = useRef<HTMLAudioElement>(null);
   const [playing, setPlaying] = useState(false);
-  // Diputar otomatis saat cover dibuka (klik tombol = izin autoplay dari browser)
+  // Pemutaran baru dimulai setelah interaksi membuka sampul.
   const wanted = useRef(true);
+
+  const playAudio = useCallback(() => {
+    const el = audio.current;
+    if (!el) return;
+
+    void el.play().catch((error: unknown) => {
+      const errorName =
+        typeof error === 'object' && error !== null && 'name' in error ? String(error.name) : '';
+      if (errorName === 'AbortError') return;
+
+      wanted.current = false;
+      setPlaying(false);
+      if (errorName === 'NotAllowedError') {
+        toast('Browser memblokir backsound. Ketuk tombol musik untuk memutarnya.');
+      } else {
+        toast('Backsound gagal diputar. Periksa file audio dan pengaturan music.src.');
+      }
+    });
+  }, []);
 
   // Mulai tepat saat tamu mengetuk "buka" (izin autoplay dari browser)
   useEffect(() => {
     const onGesture = () => {
-      if (wanted.current) audio.current?.play().catch(() => setPlaying(false));
+      if (wanted.current) playAudio();
     };
     window.addEventListener(GESTURE_EVENT, onGesture);
     return () => window.removeEventListener(GESTURE_EVENT, onGesture);
-  }, []);
+  }, [playAudio]);
 
   // Jeda saat tamu pindah aplikasi / layar dikunci, lanjut lagi saat kembali
   useEffect(() => {
@@ -28,11 +48,11 @@ export default function MusicPlayer() {
       const el = audio.current;
       if (!el || !opened) return;
       if (document.hidden) el.pause();
-      else if (wanted.current) el.play().catch(() => {});
+      else if (wanted.current) playAudio();
     };
     document.addEventListener('visibilitychange', onVisibility);
     return () => document.removeEventListener('visibilitychange', onVisibility);
-  }, [opened]);
+  }, [opened, playAudio]);
 
   if (!wedding.music.enabled) return null;
 
@@ -40,7 +60,7 @@ export default function MusicPlayer() {
     const el = audio.current;
     if (!el) return;
     wanted.current = el.paused;
-    if (el.paused) el.play().catch(() => {});
+    if (el.paused) playAudio();
     else el.pause();
   };
 

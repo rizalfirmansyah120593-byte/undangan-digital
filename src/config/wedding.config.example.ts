@@ -98,13 +98,13 @@ export const wedding: WeddingConfig = {
         image: '/gambar/gambar19.jpg',
       },
       {
-        date: 'Agustus 2025',
+        date: 'Agustus 2024',
         title: "Ta'aruf",
         description: 'Dengan niat baik dan didampingi keluarga, kami memulai proses saling mengenal.',
         image: '/gambar/gambar4.jpg',
       },
       {
-        date: 'Desember 2026',
+        date: '31 maret 2025',
         title: 'Lamaran',
         description: 'Dua keluarga bertemu dan bersepakat. Bismillah, kami melangkah ke jenjang berikutnya.',
         image: '/gambar/gambar22.jpg',
